@@ -1,0 +1,78 @@
+# modulo utilits.py
+
+alunos = {}
+
+
+def adicionar_alunos():
+    nome = input("\nDigite o nome do aluno: ")
+    matricula = int(input("\nDigite a matricula do aluno: "))
+    alunos[nome] = matricula
+
+
+def remover_aluno():
+    nome = input("\nDigite o nome do aluno: ")
+    if nome in alunos:
+        print(f"O aluno {nome} foi localizado no banco de dados!")
+        remover = input(f"Deseja remover o aluno {nome} ? (S/N)").lower()
+        if remover == "s":
+            del alunos[nome]
+            print(f"O aluno {nome} foi removido do banco de dados!")
+        else:
+            print("O aluno não foi deletado do sistema.")
+    else:
+        print(f"O aluno {nome} não foi localizado no banco de dados!")
+
+
+def atualizar_aluno():
+    matricula = int(input("Digite a matricula do aluno: "))
+    if matricula in alunos:
+        novo_nome = input("Digite o novo nome do aluno: ")
+        alunos[matricula] = novo_nome
+        print(f"Nome do aluno de matrícula {matricula} atualizado para {novo_nome}.")
+    else:
+        print(f"Matrícula {matricula} não encontrada.")
+
+
+def listar_alunos():
+    for matricula, nome in alunos.items():
+            print(f"Matrícula: {matricula}, Nome: {nome}")
+
+
+
+
+
+
+#IMPORTANDO DA BIBLIOTECA modulo utilits.py AS FUNÇÕES:
+
+
+
+#from Projeto_funcões import *
+while True:
+    print("\nEscolha uma opção:")
+    print("1 - Adicionar aluno")
+    print("2 - Remover aluno")
+    print("3 - Atualizar aluno")
+    print("4 - Listar alunos")
+    print("5 - Sair")
+
+    opcao = input("Digite a opção desejada: ")
+
+    if opcao == "1":
+        adicionar_alunos()
+    elif opcao == "2":
+        remover_aluno()
+    elif opcao == "3":
+        atualizar_aluno()
+    elif opcao == "4":
+        listar_alunos()
+    elif opcao == "5":
+        print("Saindo...")
+        break
+    else:
+        print("Opção inválida. Tente novamente.")
+
+
+
+
+
+
