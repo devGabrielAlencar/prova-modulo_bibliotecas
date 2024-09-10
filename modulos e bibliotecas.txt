@@ -1,4 +1,4 @@
-# modulo utilits.py
+# funcões_utilits.py
 
 alunos = {}
 
@@ -42,11 +42,11 @@ def listar_alunos():
 
 
 
-#IMPORTANDO DA BIBLIOTECA modulo utilits.py AS FUNÇÕES:
+#IMPORTANDO DA BIBLIOTECA  funcões_utilits.py AS FUNÇÕES:
 
 
 
-#from Projeto_funcões import *
+#from funcões_utilits import *
 while True:
     print("\nEscolha uma opção:")
     print("1 - Adicionar aluno")
